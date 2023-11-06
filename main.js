@@ -1,24 +1,65 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
-
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+class Main{
+  constructor(data){
+    this.data = data
+  }
+  renderMain(){
+    const add = `
+    <div class = "addtitle">
+    <h2>Find Out Your Current Location</h2>
+    <h3>Search anything & anywhere</h3>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+    <div class ="additem">
+    <input type ="text" placeholder ="I am looking for...">
+    <input type ="text" placeholder ="Location">
+    <button class = "serchbtn">Search</button>
+    </div>`
+    const html = maiData.map((itm) => {
+      return `
+      <div class = 'subheader'>
+     <h2> ${itm.title}</h2>
+     <div> ${itm.home}</div>
+     <div> ${itm.map}</div>
+     <div> ${itm.about}</div>
+     <div> ${itm.page}</div>
+      </div>`
+    }).join("")
+    document.getElementById('mainid').innerHTML = html + add
+  }
+  // async init(){
+  //   const datafectch = await dataService.getData('/package.json')
+  //   console.log(datafectch)
+  // }
+}
+const maiData = [
+  {
+    title: "Local",
+    home: "HomePage",
+    map: "Map Example",
+    cate: "Categories",
+    about: "About",
+    page: "Page"
+  }
+]
+const maninew = new Main(maiData)
+maninew.renderMain()
 
-setupCounter(document.querySelector('#counter'))
+var move =[];
+fetch('./dummy.json')
+    .then((response) => response.json())
+    .then((data) =>{
+      move = data;
+      console.log(move)
+      console.log(data)
+      reanderdata(move)
+});
+
+function reanderdata(data){
+  const tpl = data.jobs.map((itm) => {
+      return `<div class = "set">
+     <span class ="idtitle"> ${itm.id}.:-${itm.title}
+     </span>
+     <img src ="${itm.img}" class="renderimg">
+     </div>`
+  }).join("")
+  document.getElementById('renderjobs').innerHTML = tpl
+}

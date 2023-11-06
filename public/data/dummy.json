@@ -1,0 +1,44 @@
+{"jobs": 
+[
+    {
+        "id":1,
+        "title":"Delhi NCR",
+        "img": "https://miro.medium.com/v2/resize:fit:1400/1*qYUvh-EtES8dtgKiBRiLsA.png",
+        "company":"Oportun",
+        "location": "Delhi",
+        "salary": "30-40K"
+    },
+    {
+        "id":2,
+        "title":"Noida ,UP",
+        "img": "https://miro.medium.com/v2/resize:fit:1400/1*qYUvh-EtES8dtgKiBRiLsA.png",
+        "company":"Oportun",
+        "location": "Noida",
+        "salary": "40-50K"
+    },
+    {
+        "id":3,
+        "title":"Bijnor, UP",
+        "img": "https://miro.medium.com/v2/resize:fit:1400/1*qYUvh-EtES8dtgKiBRiLsA.png",
+        "company":"Oportun",
+        "location": "Meerut",
+        "salary": "20-40K"
+    },
+    {
+        "id":4,
+        "title":"Lucknow",
+        "img": "https://miro.medium.com/v2/resize:fit:1400/1*qYUvh-EtES8dtgKiBRiLsA.png",
+        "company":"Oportun",
+        "location": "Delhi",
+        "salary": "30-40K"
+    },
+    {
+        "id":5,
+        "title":"Gururam",
+        "img": "https://miro.medium.com/v2/resize:fit:1400/1*qYUvh-EtES8dtgKiBRiLsA.png",
+        "company":"JPMC",
+        "location": "NYC",
+        "salary": "100-140K"
+    }
+ 
+]}
